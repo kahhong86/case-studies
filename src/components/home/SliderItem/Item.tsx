@@ -3,7 +3,7 @@ export const SliderItem = [
     {
         name: "Product 1",
         url: "Feature1",
-        imageUrl: "feature1.jpg"
+        imageUrl: "feature1_2x.jpg"
     },
     {
         name: "Product 2",

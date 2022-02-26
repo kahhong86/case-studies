@@ -7,6 +7,15 @@ module.exports = {
 			margin: {
 				'46':'11.5rem'
 			},
+			height: {
+				'99':'40vw'
+			},
+			rotate: {
+				'35':"35deg"
+			},
+			maxHeight: {
+				'500':"500px"
+			}
 		},
 	},
 	variants: {},

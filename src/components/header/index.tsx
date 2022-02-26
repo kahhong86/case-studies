@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { assetsUrl } from "../../../utils/backend-url";
 import { ItemCategory } from "./Item";
+import Popup from 'reactjs-popup';
 
 interface HeaderProps{}
 
@@ -39,11 +40,9 @@ const Header:FunctionComponent<HeaderProps> = () => {
                 <div className="absolute top-2 right-5 md:top-0 md:right-0 md:flex-auto md:relative md:w-2/12 w-4/12">
                     <div className="flex h-full text-center">
                         <div className="flex-1">
-                            <Link href="/">
-                                <a className="md:py-4 block font-bold text-xs md:text-base">
-                                    Sign In
-                                </a>
-                            </Link>
+                            <Popup trigger={<button className="md:py-4 block font-bold text-xs md:text-base text-center mx-auto"> Sign In</button>} >
+                                <div>Popup content here !!</div>
+                            </Popup>
                         </div>
                         <div className="flex-1">
                             <Link href="/">
@@ -77,7 +76,7 @@ const Header:FunctionComponent<HeaderProps> = () => {
                 <div className="md:flex bg-blue-500 block w-[680px] md:w-full">
                     {ItemCategory.map(({name,url},index) => {
                         return(
-                            <div className="inline-block p-2" key={index}>
+                            <div className="inline-block px-2 py-3" key={index}>
                                 <Link href={url}>
                                     <a className="px-5 inline-block text-white">
                                         <span className="">{name}</span>
