@@ -1,7 +1,7 @@
 import { FunctionComponent } from "react";
 import { useRouter } from "next/router";
 import Layout from "../../src/components/layout/Layout";
-import Header from "../../src/components/header/Header";
+import Header from "../../src/components/header";
 
 interface ProductProps{}
 
