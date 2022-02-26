@@ -19,7 +19,7 @@ export const ProductItem = [
     {
         name: "Gucci Bag",
         url: "/fashion/bag",
-        src: "/product/bag.jpg",
+        src: "/product/bag.jpeg",
         pricelow: "500",
         pricehigh: "600",
         discount: "30%"
