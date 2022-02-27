@@ -2,22 +2,22 @@
 export const ItemCategory = [
     {
         name: "Popular",
-        url: "/PlayStation",
+        url: "/category/Popular",
     },
     {
         name: "Today's Deals",
-        url: "/XBox",
+        url: "/category/Today's Deals",
     },
     {
         name: "New Releases",
-        url: "/Switch",
+        url: "/category/New Releases",
     },
     {
         name: "Price",
-        url: "/PC",
+        url: "/category/Price",
     },
     {
         name: "Vouchers",
-        url: "/Accessories",
+        url: "/category/Vouchers",
     },
 ]

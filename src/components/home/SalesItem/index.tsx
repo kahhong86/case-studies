@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FunctionComponent } from "react";
-import { ProductItem } from "./Item";
+import { ProductItem } from "../../../../pages/product/productItem";
 import Image from "next/image";
 
 // Import Swiper React components
@@ -47,9 +47,8 @@ const Sales:FunctionComponent<SalesProps> = () => {
                             <div className="bg-white mx-1 text-center">
                                 <Link href={`/product${url}`}>
                                     <a className="relative">
-                                        <span className="absolute top-0 right-0">{discount}</span>
                                         <div className="block relative">
-                                            <span className="absolute top-0 right-0 bg-red-500 z-10 p-1 text-xs text-yellow-300">{discount}</span>
+                                            <span className="absolute top-0 -right-1 bg-red-500 z-10 p-1 text-xs text-yellow-300">{discount}%</span>
                                             <Image 
                                                 width="100"
                                                 height="100"
@@ -61,7 +60,7 @@ const Sales:FunctionComponent<SalesProps> = () => {
                                 </Link>
                             </div>
                             <div className="px-2 bg-blue-500">
-                                <span className="text-sm md:text-base inline-block text-white h-10 leading-4 pt-2 align-top block">{name}</span>
+                                <span className="text-sm md:text-base inline-block text-white h-10 md:h-14 leading-4 pt-2 align-top block">{name}</span>
                                 <span className="block text-base text-yellow-300"><span className="text-xs font-normal">S$</span>{pricelow} {pricehigh?" ~ "+pricehigh:""}</span>
                             </div>
                             

@@ -5,7 +5,7 @@ import { FunctionComponent } from "react";
 import { ItemSection } from "../src/components/home/CategoriesItem/Categories"; 
 import Sales from "../src/components/home/SalesItem";
 import Categories from "../src/components/home/CategoriesItem";
-import Popup from 'reactjs-popup';
+import Footer from "../src/components/footer";
 
 interface HomeProps{}
 
@@ -16,6 +16,7 @@ const Home:FunctionComponent<HomeProps> = () => {
             <Slider />
             <Categories/>
             <Sales />
+            <Footer />
         </Layout>
     )
 }

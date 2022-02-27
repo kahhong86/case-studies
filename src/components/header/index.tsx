@@ -4,6 +4,7 @@ import Image from "next/image";
 import { assetsUrl } from "../../../utils/backend-url";
 import { ItemCategory } from "./Item";
 import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 
 interface HeaderProps{}
 
@@ -41,7 +42,22 @@ const Header:FunctionComponent<HeaderProps> = () => {
                     <div className="flex h-full text-center">
                         <div className="flex-1">
                             <Popup trigger={<button className="md:py-4 block font-bold text-xs md:text-base text-center mx-auto"> Sign In</button>} >
-                                <div>Popup content here !!</div>
+                                <div className="border-0 border-blue-500 z-10 p-5 bg-white">
+                                    <form action="">
+                                        <label htmlFor="user">Username:</label>
+                                        <input type="text" name="user" className="border-2 border-black mb-5 w-full"/>
+                                        <label htmlFor="">Password:</label>
+                                        <input type="text" name="" className="border-2 border-black mb-5 w-full"/>
+                                        <button className="block bg-blue-500 p-2 text-white w-full">Login</button>
+                                    </form>
+                                    <div className="border-t-2 border-black mt-5 text-center py-5">
+                                        <Link href="/signup">
+                                            <a className="bg-red-500 w-full p-2 block text-white">
+                                                Sign Up
+                                            </a>
+                                        </Link>
+                                    </div>
+                                </div>
                             </Popup>
                         </div>
                         <div className="flex-1">
