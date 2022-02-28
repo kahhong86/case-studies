@@ -4,10 +4,10 @@ import Layout from "../../src/components/layout/Layout";
 import Header from "../../src/components/header";
 import Footer from "../../src/components/footer";
 import Link from "next/link"
-import { CategoryItem } from "./categoryItem";
+import { CategoryItem } from "../../src/components/category/categoryItem";
 import { assetsUrl } from "../../utils/backend-url";
 import Image from "next/image";
-import { ProductItem } from "../product/productItem";
+import { ProductItem } from "../../src/components/product/productItem";
 
 interface CategoryProps{}
 

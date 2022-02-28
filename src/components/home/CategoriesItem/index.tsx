@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FunctionComponent } from "react"
 import { assetsUrl } from "../../../../utils/backend-url"
-import { CategoryItem } from "../../../../pages/category/categoryItem"
+import { CategoryItem } from "../../category/categoryItem"
 
 interface CategoriesProps{}
 

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FunctionComponent } from "react";
-import { ProductItem } from "../../../../pages/product/productItem";
+import { ProductItem } from "../../product/productItem";
 import Image from "next/image";
 
 // Import Swiper React components

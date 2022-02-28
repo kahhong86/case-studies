@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Layout from "../../src/components/layout/Layout";
 import Header from "../../src/components/header";
 import Footer from "../../src/components/footer";
-import { ProductItem } from "./productItem";
+import { ProductItem } from "../../src/components/product/productItem";
 import { assetsUrl } from "../../utils/backend-url";
 import Image from "next/image";
 import Link from "next/link";
