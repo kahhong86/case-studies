@@ -42,7 +42,7 @@ const Header:FunctionComponent<HeaderProps> = () => {
                     <div className="flex h-full text-center">
                         <div className="flex-1">
                             <Popup trigger={<button className="md:py-4 block font-bold text-xs md:text-base text-center mx-auto"> Sign In</button>} >
-                                <div className="border-0 border-blue-500 z-10 p-5 bg-white">
+                                <div className="border-0 border-blue-500 z-50 p-5 bg-white relative">
                                     <form action="">
                                         <label htmlFor="user">Username:</label>
                                         <input type="text" name="user" className="border-2 border-black mb-5 w-full"/>

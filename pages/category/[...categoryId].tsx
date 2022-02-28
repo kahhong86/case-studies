@@ -18,8 +18,6 @@ const Category:FunctionComponent<CategoryProps> = () => {
     const [data,setData] = useState([]);
     const [sortType, setSortType] = useState('default');
 
-    console.log('ProductItemStart ',ProductItem);
-
     useEffect(() => {
         const sortArray = (type) => {
             const types = {
@@ -42,7 +40,6 @@ const Category:FunctionComponent<CategoryProps> = () => {
         sortArray(sortType);
     },[sortType]);
 
-    console.log('ProductItem ',ProductItem);
     const dataListPrint = data.map(({name,url,src,pricelow,pricehigh,discount,category,id},index) => {
         return(
             <li className="border-2 border-black text-left" key={index}>
@@ -50,7 +47,7 @@ const Category:FunctionComponent<CategoryProps> = () => {
                     <a className="relative">
                         <div className="bg-white mx-1 text-center">
                             <div className="block relative">
-                                <span className="absolute top-0 -right-1 bg-red-500 z-10 p-1 text-xs text-yellow-300">{discount}%</span>
+                                {discount?<span className="absolute top-0 -right-1 bg-red-500 z-1 p-1 text-xs text-yellow-300">{discount}%</span>:""}
                                 <Image 
                                     width="100"
                                     height="100"
@@ -72,8 +69,8 @@ const Category:FunctionComponent<CategoryProps> = () => {
     return(
         <Layout title={`Category ${categoryId}`}>
             <Header />
-            <div className="max-w-screen-xl mx-auto flex p-5"> 
-                <aside className="w-3/12 flex-initial">
+            <div className="max-w-screen-xl mx-auto md:flex p-5"> 
+                <aside className="w-full md:w-3/12 flex-initial hidden md:inline">
                     <h1 className="font-bold border-b-2 border-black mr-5 py-3 text-xl mb-2">Category</h1>
                     <ul className="mx-0 px-0">
                         {CategoryItem.map(({name,tag,url},index) => {
@@ -89,13 +86,13 @@ const Category:FunctionComponent<CategoryProps> = () => {
                         })}
                     </ul>
                 </aside>
-                <div className="w-9/12 flex-initial">
-                    <h2 className="mb-5 font-bold border-b-2 border-black py-3 text-xl">Detail</h2>
-                    <select onChange={(e) => setSortType(e.target.value)}>
+                <div className="w-full md:w-9/12 flex-initial relative">
+                    <select onChange={(e) => setSortType(e.target.value)} className="absolute right-0 top-5 border-2 border-black bg-transparent">
                         <option value="default">Default</option>
                         <option value="pricelow">Price Low</option>
                         <option value="pricehigh">Price High</option>
                     </select>
+                    <h2 className="mb-5 font-bold border-b-2 border-black py-3 text-xl">Detail</h2>
                     <ul className="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4">
                         {categoryId == "all"?
                             dataListPrint
@@ -107,7 +104,7 @@ const Category:FunctionComponent<CategoryProps> = () => {
                                         <a className="relative">
                                             <div className="bg-white mx-1 text-center">
                                                 <div className="block relative">
-                                                    <span className="absolute top-0 -right-1 bg-red-500 z-10 p-1 text-xs text-yellow-300">{discount}%</span>
+                                                {discount?<span className="absolute top-0 -right-1 bg-red-500 z-1 p-1 text-xs text-yellow-300">{discount}%</span>:""}
                                                     <Image 
                                                         width="100"
                                                         height="100"
