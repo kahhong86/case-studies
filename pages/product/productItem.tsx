@@ -1,4 +1,3 @@
-//Temporary API for case studies purposes
 export const ProductItem = [
     {
         id:"gaming1",
