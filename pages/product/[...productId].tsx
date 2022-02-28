@@ -135,7 +135,10 @@ const Product:FunctionComponent<ProductProps> = () => {
                                             <Link href={`/product${url}`}>
                                                 <a className="relative">
                                                     <div className="block relative">
-                                                        <span className="absolute top-0 -right-1 bg-red-500 z-10 p-1 text-xs text-yellow-300">{discount}%</span>
+                                                        {discount != 0?
+                                                            <span className="absolute top-0 -right-1 bg-red-500 z-10 p-1 text-xs text-yellow-300">{discount}%</span>
+                                                            :""
+                                                        }
                                                         <Image 
                                                             width="100"
                                                             height="100"

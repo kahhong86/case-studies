@@ -245,7 +245,38 @@ export const ProductItem = [
         pricelow:5,
         pricehigh:15,
         discount:0,
-        url:"/product/watermelon1",
+        url:"/product/grocery1",
+        description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dignissim, lectus ac suscipit fermentum, dolor ex porta arcu, at fermentum ex purus nec erat. Aliquam nec magna convallis, lobortis libero ac, suscipit justo. Morbi porta metus arcu, in vulputate leo mattis non. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec sed enim non leo imperdiet mollis vitae feugiat nulla. Mauris lobortis placerat urna, vitae congue massa elementum ut. Curabitur eu rutrum nulla. Aenean massa lectus, vestibulum id nunc non, eleifend porttitor nisl. Aenean pharetra est quis eleifend porttitor. Curabitur id tellus at libero accumsan ultricies. Praesent egestas velit vitae nisl molestie, non semper urna suscipit. Donec feugiat sapien eget eros fermentum, vel placerat erat sodales. Vestibulum et consequat neque.",
+    },
+    {
+        id:"grocery2",
+        name: "Carrot",
+        rating: "4.5",
+        vendor: "NTUC",
+        category:"grocery",
+        src:"/product/carrot.jpg",
+        comment:{
+            0:{
+                user:"bot1",
+                message:"Fast Delivery",
+                rate:"5"
+            },
+            1:{
+                user:"nice222",
+                message:"Nice Job",
+                rate:"4.5",
+            },
+            2:{
+                user:"fiend",
+                message:"Arrived the next day. Fantastic",
+                rate:"5"
+            },
+        },
+        sold:"10",
+        pricelow:2,
+        pricehigh:0,
+        discount:0,
+        url:"/product/grocery2",
         description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dignissim, lectus ac suscipit fermentum, dolor ex porta arcu, at fermentum ex purus nec erat. Aliquam nec magna convallis, lobortis libero ac, suscipit justo. Morbi porta metus arcu, in vulputate leo mattis non. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec sed enim non leo imperdiet mollis vitae feugiat nulla. Mauris lobortis placerat urna, vitae congue massa elementum ut. Curabitur eu rutrum nulla. Aenean massa lectus, vestibulum id nunc non, eleifend porttitor nisl. Aenean pharetra est quis eleifend porttitor. Curabitur id tellus at libero accumsan ultricies. Praesent egestas velit vitae nisl molestie, non semper urna suscipit. Donec feugiat sapien eget eros fermentum, vel placerat erat sodales. Vestibulum et consequat neque.",
     },
     {

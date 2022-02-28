@@ -12,7 +12,7 @@ const Categories:FunctionComponent<CategoriesProps> = () => {
             <h2 className="mb-5 md:mb-10 md:mt-7 font-bold text-xl md:text-3xl text-blue-500">Categories</h2>
             <div className="px-5">
                 <ul className="mx-auto w-full grid grid-cols-4 gap-4">
-                    {CategoryItem.map(({src,name,url},index) => {
+                    {CategoryItem.slice(1).map(({src,name,url},index) => {
                         return(
                             <li key={index}>
                                 <div className="p-5 md:py-8 border-2 border-blue-500 text-center">

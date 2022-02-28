@@ -41,7 +41,7 @@ const Sales:FunctionComponent<SalesProps> = () => {
                         },
                     }}
                 >
-                {ProductItem.map(({name,url,src,pricelow,pricehigh,discount},index) => {
+                {[...ProductItem].map(({name,url,src,pricelow,pricehigh,discount},index) => {
                     return(
                         <SwiperSlide key={index} className="bg-white">
                             <div className="bg-white mx-1 text-center">
