@@ -53,7 +53,6 @@ const Product:FunctionComponent<ProductProps> = () => {
                                 <div key={index}>
                                     <div className="md:flex py-5">
                                         <div className="flex-auto border-2 border-black mr-10 w-full md:w-4/12 text-center">
-                                            {/* <div className={`w-full h-full bg-[url(${assetsUrl + product?.src})]`}>a</div> */}
                                             <div className="w-full h-full bg-contain bg-no-repeat bg-center" style={{backgroundImage: `url(${assetsUrl +product?.src})`}}></div>
                                             
                                         </div>
