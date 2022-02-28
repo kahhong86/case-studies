@@ -280,7 +280,7 @@ export const ProductItem = [
         description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dignissim, lectus ac suscipit fermentum, dolor ex porta arcu, at fermentum ex purus nec erat. Aliquam nec magna convallis, lobortis libero ac, suscipit justo. Morbi porta metus arcu, in vulputate leo mattis non. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec sed enim non leo imperdiet mollis vitae feugiat nulla. Mauris lobortis placerat urna, vitae congue massa elementum ut. Curabitur eu rutrum nulla. Aenean massa lectus, vestibulum id nunc non, eleifend porttitor nisl. Aenean pharetra est quis eleifend porttitor. Curabitur id tellus at libero accumsan ultricies. Praesent egestas velit vitae nisl molestie, non semper urna suscipit. Donec feugiat sapien eget eros fermentum, vel placerat erat sodales. Vestibulum et consequat neque.",
     },
     {
-        id:"console1",
+        id:"gaming3",
         name: "Steam Deck",
         rating: "4.5",
         vendor: "Valve",
@@ -369,7 +369,7 @@ export const ProductItem = [
         pricelow:70,
         pricehigh:80,
         discount:2,
-        url:"/product/gaming-6",
+        url:"/product/gaming6",
         description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dignissim, lectus ac suscipit fermentum, dolor ex porta arcu, at fermentum ex purus nec erat. Aliquam nec magna convallis, lobortis libero ac, suscipit justo. Morbi porta metus arcu, in vulputate leo mattis non. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec sed enim non leo imperdiet mollis vitae feugiat nulla. Mauris lobortis placerat urna, vitae congue massa elementum ut. Curabitur eu rutrum nulla. Aenean massa lectus, vestibulum id nunc non, eleifend porttitor nisl. Aenean pharetra est quis eleifend porttitor. Curabitur id tellus at libero accumsan ultricies. Praesent egestas velit vitae nisl molestie, non semper urna suscipit. Donec feugiat sapien eget eros fermentum, vel placerat erat sodales. Vestibulum et consequat neque.",
     },
     {

@@ -45,7 +45,7 @@ const Sales:FunctionComponent<SalesProps> = () => {
                     return(
                         <SwiperSlide key={index} className="bg-white">
                             <div className="bg-white mx-1 text-center">
-                                <Link href={`/product${url}`}>
+                                <Link href={`${url}`}>
                                     <a className="relative">
                                         <div className="block relative">
                                             <span className="absolute top-0 -right-1 bg-red-500 z-10 p-1 text-xs text-yellow-300">{discount}%</span>

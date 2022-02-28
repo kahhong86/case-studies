@@ -8,7 +8,6 @@ import { CategoryItem } from "./categoryItem";
 import { assetsUrl } from "../../utils/backend-url";
 import Image from "next/image";
 import { ProductItem } from "../product/productItem";
-import Product from "../product/[...productId]";
 
 interface CategoryProps{}
 
@@ -40,25 +39,35 @@ const Category:FunctionComponent<CategoryProps> = () => {
         sortArray(sortType);
     },[sortType]);
 
-    const dataListPrint = data.map(({name,url,src,pricelow,pricehigh,discount,category,id},index) => {
+    const dataListPrint = data.map((product,index) => {
         return(
             <li className="border-2 border-black text-left" key={index}>
-                <Link href={`${url}`}>
+                <Link href={`${product.url}`}>
                     <a className="relative">
                         <div className="bg-white mx-1 text-center">
                             <div className="block relative">
-                                {discount?<span className="absolute top-0 -right-1 bg-red-500 z-1 p-1 text-xs text-yellow-300">{discount}%</span>:""}
+                                {product.discount?
+                                    <span className="absolute top-0 -right-1 bg-red-500 z-1 p-1 text-xs text-yellow-300">
+                                        {product.discount}%
+                                    </span>
+                                    :
+                                    ""
+                                }
                                 <Image 
                                     width="100"
                                     height="100"
-                                    src={assetsUrl + src}
-                                    alt={name}
+                                    src={assetsUrl + product.src}
+                                    alt={product.name}
                                 />
                             </div>
                         </div>
                         <div className="px-2 pb-2 bg-blue-500">
-                            <span className="text-sm md:text-base inline-block text-white h-10 md:h-14 leading-4 pt-2 align-top block">{name}</span>
-                            <span className="block text-base text-yellow-300"><span className="text-xs font-normal">S$</span>{pricelow} {pricehigh?" ~ "+pricehigh:""}</span>
+                            <span className="text-sm md:text-base inline-block text-white h-10 md:h-14 leading-4 pt-2 align-top block">
+                                {product.name}
+                            </span>
+                            <span className="block text-base text-yellow-300">
+                                <span className="text-xs font-normal">S$</span>{product.pricelow} {product.pricehigh?" ~ "+product.pricehigh:""}
+                            </span>
                         </div>
                     </a>    
                 </Link>
@@ -87,7 +96,8 @@ const Category:FunctionComponent<CategoryProps> = () => {
                     </ul>
                 </aside>
                 <div className="w-full md:w-9/12 flex-initial relative">
-                    <select onChange={(e) => setSortType(e.target.value)} className="absolute right-0 top-5 border-2 border-black bg-transparent">
+                    <select onChange={(e) => setSortType(e.target.value)} 
+                        className="absolute right-0 top-5 border-2 border-black bg-transparent">
                         <option value="default">Default</option>
                         <option value="pricelow">Price Low</option>
                         <option value="pricehigh">Price High</option>
@@ -97,25 +107,36 @@ const Category:FunctionComponent<CategoryProps> = () => {
                         {categoryId == "all"?
                             dataListPrint
                         :
-                        data.filter(pages => pages.category == categoryId).map(({name,url,src,pricelow,pricehigh,discount,category,id},index) => {
+                        data.filter(pages => pages.category == categoryId).map((product,index) => {
                             return(
                                 <li className="border-2 border-black text-left" key={index}>
-                                    <Link href={`${url}`}>
+                                    <Link href={`${product.url}`}>
                                         <a className="relative">
                                             <div className="bg-white mx-1 text-center">
                                                 <div className="block relative">
-                                                {discount?<span className="absolute top-0 -right-1 bg-red-500 z-1 p-1 text-xs text-yellow-300">{discount}%</span>:""}
+                                                    {product.discount?
+                                                        <span className="absolute top-0 -right-1 bg-red-500 z-1 p-1 text-xs text-yellow-300">
+                                                            {product.discount}%
+                                                        </span>
+                                                        :
+                                                        ""
+                                                    }
                                                     <Image 
                                                         width="100"
                                                         height="100"
-                                                        src={assetsUrl + src}
-                                                        alt={name}
+                                                        src={assetsUrl + product.src}
+                                                        alt={product.name}
                                                     />
                                                 </div>
                                             </div>
                                             <div className="px-2 pb-2 bg-blue-500">
-                                                <span className="text-sm md:text-base inline-block text-white h-10 md:h-14 leading-4 pt-2 align-top block">{name}</span>
-                                                <span className="block text-base text-yellow-300"><span className="text-xs font-normal">S$</span>{pricelow} {pricehigh?" ~ "+pricehigh:""}</span>
+                                                <span className="text-sm md:text-base inline-block text-white h-10 md:h-14 leading-4 pt-2 align-top block">
+                                                    {product.name}
+                                                </span>
+                                                <span className="block text-base text-yellow-300">
+                                                    <span className="text-xs font-normal">S$</span>
+                                                    {product.pricelow} {product.pricehigh?" ~ "+product.pricehigh:""}
+                                                </span>
                                             </div>
                                         </a>    
                                     </Link>
