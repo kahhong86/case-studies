@@ -10,7 +10,9 @@ interface HomeProps{}
 
 const Home:FunctionComponent<HomeProps> = () => {
     return (
-        <Layout title="Homepage">
+        <Layout 
+            title="Royal Shopping - Homepage" 
+            description="Explore the fast and affordable ecommerce website that enhance your shopping experience and 24 hours customer supports.">
             <Header />
             <Slider />
             <Categories/>

@@ -76,7 +76,7 @@ const Category:FunctionComponent<CategoryProps> = () => {
     });
 
     return(
-        <Layout title={`Category ${categoryId}`}>
+        <Layout title={`Category ${categoryId}`} description="Categories including laptops, tablets, gaming console and many more with affordable prices">
             <Header />
             <div className="max-w-screen-xl mx-auto md:flex p-5"> 
                 <aside className="w-full md:w-3/12 flex-initial hidden md:inline">

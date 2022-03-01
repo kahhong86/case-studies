@@ -18,7 +18,7 @@ const Header:FunctionComponent<HeaderProps> = () => {
                             height="50"
                             width="50"
                             src={assetsUrl + '/share/logo.png'}
-                            alt="Logo"
+                            alt="Royal Shopping - One true experience for ecommerce shopping"
                         />
                         <span className="text-xl font-bold align-top top-2 relative inline-block leading-5 pr-4 border-r-2 border-black text-blue-700">Royal<br/>Shopping</span>
                     </a>                

@@ -32,7 +32,7 @@ const Slider:FunctionComponent<SwiperProps> = () => {
                                 width="2000"
                                 height="816"
                                 src={assetsUrl+"/home/"+imageUrl}
-                                alt="image"
+                                alt={name}
                                 className="swiper-lazy"
                             />
                             <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
